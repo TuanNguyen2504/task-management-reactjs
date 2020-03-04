@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+// resuable
+.icon-btn {
+    width: .75rem;
+    height: .75rem;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    margin: 0 5px;
+}
+
+button,
+button:focus,
+button:active,
+.btn {
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+// header
+header {
+    text-align: center;
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+
+    @media only screen and (max-width: 375px) {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
+
+// TaskForm
+.TaskForm {
+    margin-bottom: 50px;
+
+    form {
+        border: 2px solid rgb(255, 210, 198, .8);
+        border-radius: 5px;
+
+        .heading {
+            background-color: rgb(255, 210, 198, .4);
+            color: rgb(51, 37, 33);
+            padding: 8px 15px;
+            text-align: left;
+            position: relative;
+
+            .close-icon {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                width: 20px;
+                height: 20px;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+
+                &:hover,
+                &:active {
+                    opacity: .6;
+                    -webkit-transition: all .5s;
+                    transition: all .5s;
+                }
+            }
+        }
+
+        .form-content {
+            padding: 20px;
+
+            .form-item {
+                margin-bottom: 10px;
+                width: 100%;
+
+                input,
+                select {
+                    width: 100%;
+                    height: 35px;
+                    padding: 0 10px;
+
+                }
+
+                select {
+                    color: #333;
+                    margin-bottom: 20px;
+                }
+            }
+
+            label {
+                font-size: 1.05rem;
+                font-weight: 500;
+                display: block;
+            }
+        }
+
+        .button-group {
+            text-align: center;
+
+            .btn {
+                text-align: center;
+                font-weight: 500;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.main-content {
+    .FormControl {
+        .add-btn {
+            margin-bottom: 1rem;
+        }
+
+        .control {
+            position: relative;
+            display: -webkit-box;
+            display: flex;
+            margin-bottom: 20px;
+
+            .Search {
+                width: 70%;
+                margin-right: 20px;
+
+                input {
+                    width: 80%;
+                    height: 44px;
+                    padding: 8px 14px;
+                }
+
+                .search-btn {
+                    height: 44px;
+                    position: absolute;
+                    border-radius: 0;
+                }
+            }
+
+            .Sort {
+                .btn-group {
+                    height: 44px !important;
+                }
+
+                .sort-icon {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span {
+                    font-weight: 500;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .control {
+                display: block;
+
+                .Sort {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+
+    .List {
+        text-align: center;
+
+        .filter {
+
+            input,
+            select {
+                width: 100%;
+                height: 35px;
+                padding-left: 15px;
+            }
+        }
+
+        .name-task {
+            max-width: 200px;
+
+            p {
+                text-align: left;
+                word-wrap: break-word;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+
+        .td-status,
+        .td-btn {
+            text-align: center;
+
+            .btn:first-child {
+                margin-right: 20px;
+            }
+
+            .status-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+
+            .td-btn {
+                text-align: center;
+            }
+
+            .td-btn .btn {
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

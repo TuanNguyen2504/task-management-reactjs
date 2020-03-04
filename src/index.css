@@ -11,3 +11,59 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 999999999;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 28px;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  color: rgba(255, 0, 0, 0.5);
+  line-height: 40px;
+}
+
+.overlay img {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overlay a {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 796px){
+  .overlay{
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 330px){
+  .overlay h1{
+    font-size: 20px;
+  }
+}
